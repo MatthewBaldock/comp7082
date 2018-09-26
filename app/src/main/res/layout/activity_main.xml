@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="6dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/searchPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:onClick="searchClick"
+        android:text="Search"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintStart_toEndOf="@+id/uploadPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/snapPhoto" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="17dp"
+        android:onClick="settingsClick"
+        android:text="Settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/navRight" />
+
+    <Button
+        android:id="@+id/navRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:onClick="rightClick"
+        android:text="Right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/snapPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/photoView" />
+
+    <Button
+        android:id="@+id/navLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="57dp"
+        android:onClick="leftClick"
+        android:text="Left"
+        app:layout_constraintBottom_toTopOf="@+id/uploadPhoto"
+        app:layout_constraintEnd_toStartOf="@+id/snapPhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoView" />
+
+    <Button
+        android:id="@+id/uploadPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="uploadClick"
+        android:text="Upload"
+        app:layout_constraintEnd_toStartOf="@+id/searchPhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navLeft" />
+
+    <Button
+        android:id="@+id/snapPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginTop="56dp"
+        android:onClick="snapClick"
+        android:text="Snap"
+        app:layout_constraintBottom_toTopOf="@+id/searchPhoto"
+        app:layout_constraintEnd_toStartOf="@+id/navRight"
+        app:layout_constraintStart_toEndOf="@+id/navLeft"
+        app:layout_constraintTop_toBottomOf="@+id/photoView" />
+
+    <ImageView
+        android:id="@+id/photoView"
+        android:layout_width="335dp"
+        android:layout_height="366dp"
+        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="preview"
+        app:layout_constraintBottom_toTopOf="@+id/navRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
